@@ -1,4 +1,69 @@
 input[type=text] {
     border: none;
-    border-bottom: 2px solid red;
-  }
+    background-color: orangered;
+    border-bottom: 2px solid white;
+    width: 33%;
+    height: 50px;
+    font-size: 20px;
+    color: white;
+}
+
+ul {
+    list-style-type: none;
+}
+
+li {
+    list-style-type: none;
+}
+
+body{
+    background-color: orangered;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+}
+
+.search{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+
+
+#demo{
+    display:flex;
+    flex-flow:row wrap;
+    justify-content: flex-start;
+    
+}
+
+.stop{
+    width: 30%;
+    margin-left: 10px;
+    margin-top: 20px;
+    font-size: 20px;
+    
+}
+
+.stopName{
+    text-decoration: underline;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.lines {
+    display: flex;
+}
+
+
+.waitingTime{
+    margin-right: 10px;
+}
+
+.lineCode{
+    margin-right: 10px;
+}
+.destination{
+    float: right;
+}
