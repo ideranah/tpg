@@ -23,7 +23,7 @@ xhttp.onreadystatechange = function() { // On attache le callback
                         if(dep.waitingTime > 0 ){
                             lineNbr.innerHTML = '<li class="waitingTime">'+dep.waitingTime+'</li><li class="lineCode">'+dep.line.lineCode +'</li><li class="destination">'+dep.line.destinationName+'</li>';
                         }else{
-                            lineNbr.innerHTML = '<li class="waitingTime"><i class="fas fa-plane-arrival"></i></li><li class="lineCode">'+dep.line.lineCode +'</li><li class="destination">'+dep.line.destinationName+'</li>';
+                            lineNbr.innerHTML = '<li class="waitingTime"><i class="fas fa-bus"></i></li><li class="lineCode">'+dep.line.lineCode +'</li><li class="destination">'+dep.line.destinationName+'</li>';
                         }
                         
                         stopName.appendChild(lineNbr);

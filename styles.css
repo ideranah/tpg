@@ -1,69 +1,119 @@
-input[type=text] {
-    border: none;
-    background-color: orangered;
-    border-bottom: 2px solid white;
-    width: 33%;
-    height: 50px;
-    font-size: 20px;
-    color: white;
-}
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
 
-ul {
-    list-style-type: none;
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
 }
-
-li {
-    list-style-type: none;
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
 }
 
 body{
     background-color: orangered;
     color: white;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 30px;
+}
+
+::selection {
+    background: #867d4e; /* WebKit/Blink Browsers */
+}
+
+input[type=text] {
+    border: none;
+    margin: 0 0 10px 0;
+    background-color: orangered;
+    border-bottom: 2px solid white;
+    width: 50%;
+    font-size: 28px;
+    color: white;
+    outline: none;
+    text-align: center;
+}
+
+ul, li {
+    margin:0;
+    padding: 0;
+    text-indent: 0;
+    list-style-type: none;
 }
 
 .search{
     display: flex;
     justify-content: center;
-    margin-top: 20px;
+    margin-top: 30px;
 }
 
-
-
-#demo{
+#app{
     display:flex;
-    flex-flow:row wrap;
-    justify-content: flex-start;
-    
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
 
 .stop{
-    width: 30%;
-    margin-left: 10px;
-    margin-top: 20px;
-    font-size: 20px;
-    
+    width: 100%;
+    margin-top: 10px;
+    margin-left: 20%;
+    margin-right: 10%;
 }
 
 .stopName{
-    text-decoration: underline;
-    text-transform: uppercase;
     text-align: center;
+    font-weight: bolder;
 }
-
-.lines {
-    display: flex;
-}
-
 
 .waitingTime{
-    margin-right: 10px;
+    display: inline-block;
+    width: 10%;
+    text-align: right;
 }
 
 .lineCode{
-    margin-right: 10px;
+    display: inline-block;
+    width:10%;
+    text-align: right;
 }
 .destination{
-    float: right;
+    display: inline-block;
+    width:77%;
+    text-align: left;
+    margin-left: 3%;
 }
