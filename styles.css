@@ -69,13 +69,6 @@ input[type=text] {
     text-align: center;
 }
 
-ul, li {
-    margin:0;
-    padding: 0;
-    text-indent: 0;
-    list-style-type: none;
-}
-
 .search{
     display: flex;
     justify-content: center;
@@ -83,37 +76,26 @@ ul, li {
 }
 
 #app{
-    display:flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    width: 100%;
 }
 
 .stop{
     width: 100%;
     margin-top: 10px;
-    margin-left: 20%;
-    margin-right: 10%;
 }
 
-.stopName{
-    text-align: center;
-    font-weight: bolder;
-}
-
-.waitingTime{
-    display: inline-block;
-    width: 10%;
-    text-align: right;
-}
-
-.lineCode{
-    display: inline-block;
-    width:10%;
-    text-align: right;
-}
-.destination{
-    display: inline-block;
-    width:77%;
+.stop thead{
+    padding-top: 12px;
+    padding-bottom: 12px;
     text-align: left;
-    margin-left: 3%;
+    color: white;
 }
+
+.app td{
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    color: white; 
+}
+

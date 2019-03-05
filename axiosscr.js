@@ -18,23 +18,24 @@ function searchDepartures(val){
         })
         .then(function (responses){
             for(let response of responses){
-                console.log(response);
-            stopName = document.createElement("ul"); //LET  VS VAR
-            stopName.className="stop";
-            stopName.innerHTML ='<li class="stopName">'+response.data.stop.stopName+'</li>';
-            app.appendChild(stopName);
-               let departures = response.data.departures.slice(0, 8);
-
-               for (let dep of departures) {
-                   let lineNbr = document.createElement("li");
-                   lineNbr.className = "line";
-                   if(dep.waitingTime > 0 ){
-                       lineNbr.innerHTML = '<span class="waitingTime">'+dep.waitingTime+'\'</span><span class="lineCode">'+dep.line.lineCode +'</span><span class="destination">'+dep.line.destinationName+'</span>';
-                   }else{
-                       lineNbr.innerHTML = '<span class="waitingTime"><i class="fas fa-bus"></i></span><span class="lineCode">'+dep.line.lineCode +'</span><span class="destination">'+dep.line.destinationName+'</span>';
+                
+                stopName = document.createElement("table");
+                stopName.className="stop";
+                stopName.innerHTML ='<thead>'+response.data.stop.stopName+'<tr>th><i class="far fa-clock"></i></th><th><i class="fas fa-list-ol"></i></th><th>Déstination</th></tr></thead>';
+                app.appendChild(stopName);
+                let departures = response.data.departures.slice(0, 8);
+                tbody = document.createElement("tbody");
+                stopName.appendChild(tbody);
+                for (let dep of departures) {
+                    let lineNbr = document.createElement("tr");
+                    lineNbr.className = "line";
+                    if(dep.waitingTime > 0 ){
+                        lineNbr.innerHTML = '<td class="waitingTime">'+dep.waitingTime+'\'</td><tr><td class="lineCode">'+dep.line.lineCode +'</td><tr><td class="destination">'+dep.line.destinationName+'</td>';
+                    }else{
+                        lineNbr.innerHTML = '<td class="waitingTime"><i class="fas fa-bus"></i></td><tr><td class="lineCode">'+dep.line.lineCode +'</td><tr><td class="destination">'+dep.line.destinationName+'</td>';
                    }
-                   stopName.appendChild(lineNbr); 
-               }
+                   tbody.appendChild(lineNbr); 
+                }
            }
          
         })
